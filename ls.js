@@ -22,7 +22,7 @@ function printFile(dirName, file) {
             fileInfo += getPermissionsStringFor(stats.mode, 0400, 0200, 0100);
             fileInfo += getPermissionsStringFor(stats.mode, 040, 020, 010);
             fileInfo += getPermissionsStringFor(stats.mode, 04, 02, 01);
-            fileInfo += ` ${t.getFullYear()}-${ensureZeros(t.getMonth())}-${ensureZeros(t.getDay())} ${ensureZeros(t.getHours())}:${ensureZeros(t.getMinutes())} `;
+            fileInfo += ` ${t.getFullYear()}-${ensureZeros(t.getMonth() + 1)}-${ensureZeros(t.getDate())} ${ensureZeros(t.getHours())}:${ensureZeros(t.getMinutes())} `;
             console.log(option ? fileInfo + file : file);
         });
     }
